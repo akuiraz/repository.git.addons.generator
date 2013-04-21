@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<addon
+  id="webinterface.anxiety"
+  version="0.1.0"
+  name="Anxiety"
+  provider-name="@ccanado | @bit_jammer">
+  <requires>
+    <import addon="xbmc.gui" version="3.00"/>
+    <import addon="xbmc.json" version="4.00"/>
+  </requires>
+  <extension
+    point="xbmc.gui.webinterface"/>
+  <extension point="xbmc.addon.metadata">
+    <language>en</language>
+    <summary lang="en">Anxiety Web Interface - Social view and management of XBMC Contents</summary>
+    <summary lang="es">Anxiety Web Interface - Vista social y gestion de contenidos XBMC</summary>
+    <description lang="en">Feed your anxiety with a flexible access to the quality of your content.
+Make social your library and share your magic.</description>
+    <description lang="es">Alimenta tu ansiedad con un acceso flexible a la calidad de tus contenidos.
+Haz social de tu biblioteca y comparte tu magia.</description>
+    <platform>all</platform>
+  </extension>
+</addon>
