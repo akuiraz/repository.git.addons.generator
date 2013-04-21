@@ -105,32 +105,18 @@
     </extension>
 </addon>
 
-<addon id="plugin.video.synopsi"
-       name="SynopsiTV"
-       version="1.0.7"
-       provider-name="Synopsi.TV">
-	<requires>
-		<import addon="xbmc.python" version="2.1.0" />
-		<import addon="xbmc.addon" version="12.0.0" />
-		<import addon="xbmc.metadata" version="2.1.0" />
-		<import addon="xbmc.gui" version="4.0.0" />
-
-		<import addon="script.module.parsedom" version="1.5.1" />
-		<import addon="plugin.video.youtube" version="2.9.1" /> <!-- We play trailers through this plugin -->
-	</requires>
-
-	<extension point="xbmc.python.pluginsource" library="addon.py">
-		<provides>video</provides> <!-- addon.py is file for addon -->
-	</extension>
-	<extension point="xbmc.service" library="service.py" start="login">
-		<provides>service</provides> <!-- service.py is file for service/daemon -->
-	</extension>
-	<extension point="xbmc.addon.metadata">
-		<platform>all</platform>
-		<summary>SynopsiTV</summary>
-		<description>SynopsiTV helps you discover movies and shows by generating personalized recommendations based on your unique and evolving viewing style. [CR][CR]To log in, sign up at www.synopsi.tv. [CR][CR]Report bugs at https://github.com/Synopsi/XBMC/issues</description>
-		<language></language>
-	</extension>
+<addon id="repository.git.addons.generator" name="Github Addons Generator" version="1.0.0" provider-name="akuiraz">
+        <extension point="xbmc.addon.repository" name="Github Addons Generator">
+                <info compressed="false">https://raw.github.com/akuiraz/repository.git.addons.generator/master/addons.xml</info>
+                <checksum>https://raw.github.com/akuiraz/repository.git.addons.generator/master/addons.xml.md5</checksum>
+                <datadir zip="true">https://github.com/akuiraz/repository.git.addons.generator/raw/master/</datadir>
+        </extension>
+        <extension point="xbmc.addon.metadata">
+                <summary>Install add-ons from the Github Addons Generator</summary>
+                <description>Install add-ons from the Github Addons Generator</description>
+                <disclaimer></disclaimer>
+                <platform>all</platform>
+        </extension>
 </addon>
 
 <addon id="script.extendedinfo" name="ExtendedInfo Script" version="0.5.0" provider-name="phil65">
@@ -323,6 +309,42 @@ Special thanks to all who contributed to this plugin! Check the commit history a
   </extension>
 </addon>
 
+	<addon id="skin.refocus.big" version="0.87.4" name="reFocus Big" provider-name="Jeroen Modded by Salem">
+	<requires>
+		<import addon="xbmc.gui" version="4.0.0"/>
+		<import addon="script.favourites" version="3.2.4"/>
+		<import addon="script.playlists" version="0.1.1"/>
+		<import addon="script.tv.show.next.aired" version="4.1.20"/>
+		<import addon="script.artwork.downloader" version="12.0.2"/>
+		<import addon="script.artistslideshow" version="1.3.2"/>
+		<import addon="script.globalsearch" version="0.2.5"/>
+		<import addon="script.playalbum" version="0.0.6"/>
+		<import addon="script.randomandlastitems" version="2.0.0"/>
+		<import addon="service.skin.widgets" version="0.0.13"/>
+	</requires>
+	<extension point="xbmc.gui.skin" defaultthemename="Textures.xbt" effectslowdown="1.00" debugging="false">
+		<res width="1280" height="720" aspect="16:9" default="true" folder="720p" />
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>reFocus by Jeroen modded by Paul Salem</summary>
+		<summary lang="nl">reFocus door Jeroen</summary>
+		<summary lang="es">reFocus, hecho por Jeroen y modificado por Paul Salem</summary>
+		<summary lang="pl">reFocus autorstwa Jeroena</summary>
+		<summary lang="de">reFocus, von Jeroen</summary>
+		<description>reFocus mod with an added option for big and realaka fonts as well as several script support additions and new themes.  </description>
+		<description lang="nl">reFocus is een complete herziening van de originele Focus skin welke werd uitgebracht in 2008. En ook al zijn er grote visuele verschillen, het heeft nog het zelfde uitgangspunt. En dat is het bieden van een strakke, minimalistische gebruikerservaring, waarbij jouw media in het middelpunt staat.</description>
+		<description lang="es">reFocus mod con soporte opcional de fuenes de gran tamaño así como integración total de los reAlaska mods y soporte para una mayor cantidad de scripts y temas.</description>
+		<description lang="pl">reFocus to całkowite przeobrażenie poprzedniej skóry Focus, wydanej w 2008 roku. Pomimo wielu róźnić w podejściu do prezentacji materiałów, nowa skóra oparta jest o tę samą filozofię co jej poprzedniczka, która zakłada lekkość, minimalizm i płynność, stawiając Twoje media w centrum doznań.</description>
+		<description lang="de">reFocus ist ein komplettes redesign des Focus Skins, der 2008 veröffentlicht wurde. Und trotzdem dieser Skin sich optisch sehr vom Original unterscheidet, sind beide mit der selbe Philosophie erstellt worden: Eine glatte, minimalistische Oberfläche zu entwickeln, die deine Medien in den Mittelpunkt des Erlebnisses setzt.</description>
+		<disclaimer>mouse usage not supported</disclaimer>
+		<disclaimer lang="nl">muis bediening wordt niet ondersteund</disclaimer>
+		<disclaimer lang="es"></disclaimer>
+		<disclaimer lang="pl"></disclaimer>
+		<disclaimer lang="de"></disclaimer>
+		<platform>all</platform>
+	</extension>
+</addon>
+
 <addon
   id="webinterface.awxi"
   version="0.6.5"
@@ -380,6 +402,24 @@ Special thanks to all who contributed to this plugin! Check the commit history a
   <description lang="zh">你可以使用此Web界面控制XBMC音/视频：播放/暂停/停止/跳过，显示艺术家/专辑/电影/剧集并播放或加入播放列表。用于台式机或便携机上支持JavaScript的浏览器，如FireFox。[CR][CR]最低要求：XBMC (pre) Eden[CR]测试浏览器：[CR] - FireFox[CR] - Chromium[CR] - Internet Explorer 9[CR]不支持：Internet Explorer 6[CR][CR]提示：当你在浏览器打开新安装或升级的Web界面前，可能需要先清除浏览器缓存。</description>
   <language>en cz</language>
   <platform>all</platform>
+  </extension>
+</addon>
+
+<addon
+  id="webinterface.XBMControl Web"
+  version="1.1.0"
+  name="XBMControl"
+  provider-name="Kabooga">
+  <requires>
+    <import addon="xbmc.gui" version="4.0.0"/>
+    <import addon="xbmc.json" version="6.0.0"/>
+  </requires>
+  <extension
+    point="xbmc.gui.webinterface"/>
+  <extension point="xbmc.addon.metadata">
+    <summary>XBMControl Web - Use your web browser to control XBMC</summary>
+    <description>You can use this webinterface to control the Audio/Video-Section of XBMC: play/pause/stop/skip, show artists/albums/movies/tv shows and play them or add them to the playlist.</description>
+    <platform>all</platform>
   </extension>
 </addon>
 
