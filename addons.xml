@@ -221,6 +221,54 @@ Deze addon zal automatisch de videobibliotheek scannen op zoek naar bekeken film
   </extension>
 </addon>
 
+<addon id="script.module.metahandler"
+	     name="metahandler"
+	     version="2.0.2"
+	     provider-name="Eldorado (inspired by anarchintosh, westcoast, daledude, t0mm0)">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0" />
+    <import addon="script.module.elementtree" version="1.2.7"/>
+    <import addon="script.module.t0mm0.common" version="1.1.0"/>
+	<import addon="script.module.myconnpy" version="0.3.2"/>
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="script.module.t0mm0.common"
+	     name="t0mm0's common stuff"
+	     version="2.1.1"
+	     provider-name="t0mm0">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0" />
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary lang="en">Collection of commonly used addon routines</summary>
+    <description lang="en">Collection of commonly used addon routines to simplify addon development.</description>
+  </extension>
+</addon>
+
+<addon id="script.module.urlresolver"
+	     name="urlresolver"
+	     version="1.0.9"
+	     provider-name="XBMCHub.com">
+  <requires>
+    <import addon="xbmc.python" version="2.0" />
+    <import addon="script.module.t0mm0.common" version="1.0.0"/>
+    <import addon="plugin.video.youtube" version="3.3.0"/>
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary lang="en">Resolve common video host URL's to be playable in XBMC.</summary>
+    <description lang="en">Resolve common video host URL's to be playable in XBMC, simplify addon development of video plugins requiring multi video hosts.</description>
+  </extension>
+</addon>
+
 <addon id="script.pydev.debug"
        name="XMBC Pydev Debug"
        version="0.0.2"
